@@ -10,6 +10,7 @@ const Page: FC<PageProps> = props => (
     <p>This is the home page. View the <A href="/cases">cases page</A>.</p>
     <p>View the <A href="/details">details page</A>.</p>
     <p>View the <A href="/tabs">tabs page</A>.</p>
+    <p><A href="/foo">foo</A> is an example of an html page.</p>
   </Fragment>
 );
 

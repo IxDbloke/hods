@@ -34,7 +34,7 @@ const Page: FC<PageProps> = props => (
       status: "Open",
       assignee: "774893",
       lastUpdated: "1 Apr",
-      person: "Jo Blu",
+      person: "Motopalisatigangar Singh",
       purchase: "donut",
       hints: "",
       previousOutcome: "Chocolate snowball"
