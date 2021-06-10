@@ -1,6 +1,6 @@
 import { FC, Fragment, createElement as h } from 'react';
 import { PageProps } from '@not-govuk/app-composer';
-import { Details, Table, Tabs, Tag } from '@not-govuk/components';
+import { Details, Table, Tabs, Tag, A } from '@not-govuk/components';
 
 const Page: FC<PageProps> = props => (
   <Fragment>
@@ -24,7 +24,7 @@ const Page: FC<PageProps> = props => (
       status: "New",
       assignee: "774893",
       lastUpdated: "1 Apr",
-      person: "Alasdair-Satma Greenburg-Cohen",
+      person: <A href="/casedetails.html">Dave Singh</A>,
       purchase: "donut",
       hints: "Vegan",
       previousOutcome: "Yum-Yum"
@@ -34,7 +34,7 @@ const Page: FC<PageProps> = props => (
       status: "Open",
       assignee: "774893",
       lastUpdated: "1 Apr",
-      person: "Motopalisatigangar Singh",
+      person: <A href="/foo">Coung McIntyre</A>,
       purchase: "donut",
       hints: "",
       previousOutcome: "Chocolate snowball"
@@ -44,7 +44,7 @@ const Page: FC<PageProps> = props => (
       status: "Closed",
       assignee: "774893",
       lastUpdated: "1 Apr",
-      person: "Ralphy Yella",
+      person: <A href="/foo">Hadi A</A>,
       purchase: "donut",
       hints: "Nut allergy",
       previousOutcome: ""
