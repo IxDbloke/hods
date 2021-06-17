@@ -1,0 +1,194 @@
+<fragment>
+  <h1>Query builder</h1>
+
+  <div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Show all cases where
+  </label>
+  <select class="govuk-select" id="what" name="what">
+    <option value="priority">Priority</option>
+    <option value="assignee">Assignee</option>
+    <option value="status">Status</option>
+      <option value="person">Person</option>
+        <option value="action">Action</option>
+        <option value="tags">Tags</option>
+  </select>
+</div>
+
+  <div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Condition
+  </label>
+  <select class="govuk-select" id="what" name="what">
+    <option value="published" selected>Is equal to</option>
+    <option value="updated">Is not equal to</option>
+    <option value="published" selected>Contains</option>
+    <option value="updated">Does not contain</option>
+  </select>
+</div>
+
+<div class="govuk-form-group">
+  <p class="govuk-label-wrapper"><label class="govuk-label govuk-label" for="event-name">
+      Value
+    </label>
+  </p>
+  <input class="govuk-input--width-10" id="event-name" name="event-name" type="text">
+</div>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+      <p class="govuk-fieldset__heading">
+        Show results as
+      </p>
+    </legend>
+    <div class="govuk-radios govuk-radios--inline">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name">
+          Totals
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no" checked="true">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          Cases
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+      <p class="govuk-fieldset__heading">
+        Show columns
+      </p>
+    </legend>
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste">
+          Priority
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Last updated
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Assignee
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Status
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Tags
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+
+  <table>
+    <caption><h2>Query results</h2></caption>
+    <tbody>
+      <tr>
+        <th scope="col">Priority</th>
+        <th scope="col">Last updated</th>
+        <th scope="col">Assignee</th>
+        <th scope="col">Status</th>
+        <th scope="col">Person</th>
+        <th scope="col">Action</th>
+        <th scope="col">Tags</th>
+      </tr>
+      <tr>
+        <td>High</td>
+        <td>12:21</td>
+        <td>113324</td>
+        <td>Open</td>
+        <td>
+          <a href="#">Dave Singh</a>
+          <p>44 Berwick Place London W3 8TT</p>
+        </td>
+        <td>
+          <p>stuff</p>
+        </td>
+        <td>
+        Snappy dresser
+      </td>
+      </tr>
+      <tr>
+        <td>Medium</td>
+        <td>10:45 </td>
+        <td>231451</td>
+        <td>Open</td>
+        <td><a href="#">Sue Green</a>
+          <p>23 Baltic Place Newcastle NE3 1RR</p>
+        </td>
+        <td>
+          <p>stuff</p>
+        </td>
+        <td>
+        GSOH
+      </td>
+      </tr>
+      <tr>
+        <td>Medium</td>
+        <td>10:45</td>
+        <td>231451</td>
+        <td>Open</td>
+        <td><a href="#">Sam Grey</a>
+          <p>23 Oak Place York YO3 7TT</p>
+        </td>
+        <td>
+          <p>stuff</p>
+        </td>
+        <td>
+        Funky dancer
+      </td>
+      <tr>
+        <td>Low</td>
+        <td>10:45</td>
+        <td>231451</td>
+        <td>Open</td>
+        <td><a href="#">Amjid Fuscia</a>
+          <p>23 Baltic Place Newcastle NE3 1RR</p>
+        </td>
+        <td>
+          <p>stuff</p>
+        </td>
+        <td>
+        Sunny disposition
+      </td>
+      <tr>
+        <td>Low</td>
+        <td>10:45 </td>
+        <td>231451</td>
+        <td>Open</td>
+        <td><a href="#">Bryan Puce</a>
+          <p>23 Baltic Place Newcastle NE3 1RR</p>
+        </td>
+        <td>
+          <p>stuff</p>
+        </td>
+        <td>
+        Piano virtuoso
+      </td>
+    </tbody>
+  </table>
+
+  </fragment>

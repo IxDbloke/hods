@@ -1,0 +1,387 @@
+<Fragment>
+  <h1>Reports</h1>
+  <div class="govuk-button-group">
+
+  </div>
+  <div class="govuk-tabs" data-module="govuk-tabs">
+    <h2 class="govuk-tabs__title">
+      Contents
+    </h2>
+    <ul class="govuk-tabs__list">
+      <li class="govuk-tabs__list-item govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="reports">
+          Run reports
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+        <a class="govuk-tabs__tab" href="/finder">
+          Find cases
+        </a>
+      </li>
+    </ul>
+    <div class="govuk-tabs__panel" id="past-day">
+      <h2>Find cases</h2>
+      <h3>Date range</h3>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+            <p class="govuk-fieldset__heading">
+              Date range
+            </p>
+          </legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england" checked>
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                Date created
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                Last purchase
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                Last updated
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+      <div id="from" class="govuk-form-group">
+          <fieldset
+            aria-describedby="from-hint"
+            class="govuk-fieldset"
+            role="group"
+          >
+            <legend class="govuk-fieldset__legend">
+              <p>From:</p>
+            </legend>
+            <div class="govuk-date-input">
+              <div class="govuk-date-input__item">
+                <label for="from-day" class="govuk-label">
+                  Day
+                </label>
+                <input
+                  type="text"
+                  id="from-day"
+                  name="from[day]"
+                  pattern="[0-9]*"
+                  inputmode="numeric"
+                  class="govuk-date-input__input govuk-input govuk-input--width-2"
+                  value=""
+                />
+              </div>
+              <div class="govuk-date-input__item">
+                <label for="from-month" class="govuk-label">
+                  Month
+                </label>
+                <input
+                  type="text"
+                  id="from-month"
+                  name="from[month]"
+                  pattern="[0-9]*"
+                  inputmode="numeric"
+                  class="govuk-date-input__input govuk-input govuk-input--width-2"
+                  value=""
+                />
+              </div>
+              <div class="govuk-date-input__item">
+                <label for="from-year" class="govuk-label">
+                  Year
+                </label>
+                <input
+                  type="text"
+                  id="from-year"
+                  name="from[year]"
+                  pattern="[0-9]*"
+                  inputmode="numeric"
+                  class="govuk-date-input__input govuk-input govuk-input--width-4"
+                  value=""
+                />
+              </div>
+            </div>
+          </fieldset>
+                </div>
+                </div>
+
+          <div id="to" class="govuk-form-group">
+          <fieldset
+            aria-describedby="to-hint"
+            class="govuk-fieldset"
+            role="group"
+          >
+            <legend class="govuk-fieldset__legend">
+              <p>To:</p>
+            </legend>
+            <div class="govuk-date-input">
+              <div class="govuk-date-input__item">
+                <label for="to-day" class="govuk-label">
+                  Day
+                </label>
+                <input
+                  type="text"
+                  id="to-day"
+                  name="to[day]"
+                  pattern="[0-9]*"
+                  inputmode="numeric"
+                  class="govuk-date-input__input govuk-input govuk-input--width-2"
+                  value=""
+                />
+              </div>
+              <div class="govuk-date-input__item">
+                <label for="to-month" class="govuk-label">
+                  Month
+                </label>
+                <input
+                  type="text"
+                  id="to-month"
+                  name="to[month]"
+                  pattern="[0-9]*"
+                  inputmode="numeric"
+                  class="govuk-date-input__input govuk-input govuk-input--width-2"
+                  value=""
+                />
+              </div>
+              <div class="govuk-date-input__item">
+                <label for="to-year" class="govuk-label">
+                  Year
+                </label>
+                <input
+                  type="text"
+                  id="to-year"
+                  name="to[year]"
+                  pattern="[0-9]*"
+                  inputmode="numeric"
+                  class="govuk-date-input__input govuk-input govuk-input--width-4"
+                  value=""
+                />
+              </div>
+            </div>
+          </fieldset>
+                </div>
+
+      <h3>Conditions</h3>
+      <div class="govuk-grid-column-one-third">
+        <h4>Condition 1</h4>
+        <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Value
+        </label>
+        <select class="govuk-select" id="what" name="what">
+          <option value="priority">Priority</option>
+          <option value="assignee">Assignee</option>
+          <option value="status">Status</option>
+            <option value="person">Person</option>
+              <option value="action">Action</option>
+              <option value="tags">Tags</option>
+        </select>
+      </div>
+
+        <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Condition
+        </label>
+        <select class="govuk-select" id="what" name="what">
+          <option value="published" selected>Is equal to</option>
+          <option value="updated">Is not equal to</option>
+          <option value="published" selected>Contains</option>
+          <option value="updated">Does not contain</option>
+        </select>
+      </div>
+
+      <div class="govuk-form-group">
+        <p class="govuk-label-wrapper"><label class="govuk-label govuk-label" for="event-name">
+            Match
+          </label>
+        </p>
+        <input class="govuk-input--width-10" id="event-name" name="event-name" type="text">
+      </div>
+
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+        <h4>Condition 2</h4>
+        <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Value
+        </label>
+        <select class="govuk-select" id="what" name="what">
+          <option value="priority">Priority</option>
+          <option value="assignee">Assignee</option>
+          <option value="status">Status</option>
+            <option value="person">Person</option>
+              <option value="action">Action</option>
+              <option value="tags">Tags</option>
+        </select>
+      </div>
+
+        <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Condition
+        </label>
+        <select class="govuk-select" id="what" name="what">
+          <option value="published" selected>Is equal to</option>
+          <option value="updated">Is not equal to</option>
+          <option value="published" selected>Contains</option>
+          <option value="updated">Does not contain</option>
+        </select>
+      </div>
+
+      <div class="govuk-form-group">
+        <p class="govuk-label-wrapper"><label class="govuk-label govuk-label" for="event-name">
+            Match
+          </label>
+        </p>
+        <input class="govuk-input--width-10" id="event-name" name="event-name" type="text">
+      </div>
+
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+        <h4>Condition 3</h4>
+        <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Value
+        </label>
+        <select class="govuk-select" id="what" name="what">
+          <option value="priority">Priority</option>
+          <option value="assignee">Assignee</option>
+          <option value="status">Status</option>
+            <option value="person">Person</option>
+              <option value="action">Action</option>
+              <option value="tags">Tags</option>
+        </select>
+      </div>
+
+        <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Condition
+        </label>
+        <select class="govuk-select" id="what" name="what">
+          <option value="published" selected>Is equal to</option>
+          <option value="updated">Is not equal to</option>
+          <option value="published" selected>Contains</option>
+          <option value="updated">Does not contain</option>
+        </select>
+      </div>
+
+      <div class="govuk-form-group">
+        <p class="govuk-label-wrapper"><label class="govuk-label govuk-label" for="event-name">
+            Match
+          </label>
+        </p>
+        <input class="govuk-input--width-10" id="event-name" name="event-name" type="text">
+      </div>
+
+      </div>
+      <input
+      type="submit"
+      class="govuk-button"
+      value="Show results"
+      />
+
+
+      <div class="govuk-form-group">
+              <div class="govuk-grid-row">
+      <h2>Query results</h2>
+
+      <table>
+        <caption>People who have done stuff</caption>
+        <tbody>
+          <tr>
+            <th scope="col">Priority</th>
+            <th scope="col">Last updated</th>
+            <th scope="col">Assignee</th>
+            <th scope="col">Status</th>
+            <th scope="col">Person</th>
+            <th scope="col">Action</th>
+            <th scope="col">Tags</th>
+          </tr>
+          <tr>
+            <td>High</td>
+            <td>12:21</td>
+            <td>113324</td>
+            <td>Open</td>
+            <td>
+              <a href="#">Dave Singh</a>
+              <p>44 Berwick Place London W3 8TT</p>
+            </td>
+            <td>
+              <p>stuff</p>
+            </td>
+            <td>
+            Snappy dresser
+          </td>
+          </tr>
+          <tr>
+            <td>Medium</td>
+            <td>10:45 </td>
+            <td>231451</td>
+            <td>Open</td>
+            <td><a href="#">Sue Green</a>
+              <p>23 Baltic Place Newcastle NE3 1RR</p>
+            </td>
+            <td>
+              <p>stuff</p>
+            </td>
+            <td>
+            GSOH
+          </td>
+          </tr>
+          <tr>
+            <td>Medium</td>
+            <td>10:45</td>
+            <td>231451</td>
+            <td>Open</td>
+            <td><a href="#">Sam Grey</a>
+              <p>23 Oak Place York YO3 7TT</p>
+            </td>
+            <td>
+              <p>stuff</p>
+            </td>
+            <td>
+            Funky dancer
+          </td>
+          <tr>
+            <td>Low</td>
+            <td>10:45</td>
+            <td>231451</td>
+            <td>Open</td>
+            <td><a href="#">Amjid Fuscia</a>
+              <p>23 Baltic Place Newcastle NE3 1RR</p>
+            </td>
+            <td>
+              <p>stuff</p>
+            </td>
+            <td>
+            Sunny disposition
+          </td>
+          <tr>
+            <td>Low</td>
+            <td>10:45 </td>
+            <td>231451</td>
+            <td>Open</td>
+            <td><a href="#">Bryan Puce</a>
+              <p>23 Baltic Place Newcastle NE3 1RR</p>
+            </td>
+            <td>
+              <p>stuff</p>
+            </td>
+            <td>
+            Piano virtuoso
+          </td>
+        </tbody>
+      </table>
+
+
+    </div>
+  </div>
+</Fragment>

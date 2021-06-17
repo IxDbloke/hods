@@ -1,0 +1,262 @@
+<Fragment>
+  <h1>Reports</h1>
+  <div class="govuk-button-group">
+
+  </div>
+  <div class="govuk-tabs" data-module="govuk-tabs">
+    <h2 class="govuk-tabs__title">
+      Contents
+    </h2>
+    <ul class="govuk-tabs__list">
+      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+        <a class="govuk-tabs__tab" href="#">
+          Run reports
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="/finder">
+          Find cases
+        </a>
+      </li>
+    </ul>
+    <div class="govuk-tabs__panel" id="past-day">
+      <h2>Run reports</h2>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+            <p class="govuk-fieldset__heading">
+              Date range
+            </p>
+          </legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england" checked>
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                Date created
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                Last purchase
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                Last updated
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <div class="govuk-grid-column-one-third">
+      <div id="from" class="govuk-form-group">
+          <fieldset
+            aria-describedby="from-hint"
+            class="govuk-fieldset"
+            role="group"
+          >
+            <legend class="govuk-fieldset__legend">
+              <p>From:</p>
+            </legend>
+            <div class="govuk-date-input">
+              <div class="govuk-date-input__item">
+                <label for="from-day" class="govuk-label">
+                  Day
+                </label>
+                <input
+                  type="text"
+                  id="from-day"
+                  name="from[day]"
+                  pattern="[0-9]*"
+                  inputmode="numeric"
+                  class="govuk-date-input__input govuk-input govuk-input--width-2"
+                  value="01"
+                />
+              </div>
+              <div class="govuk-date-input__item">
+                <label for="from-month" class="govuk-label">
+                  Month
+                </label>
+                <input
+                  type="text"
+                  id="from-month"
+                  name="from[month]"
+                  pattern="[0-9]*"
+                  inputmode="numeric"
+                  class="govuk-date-input__input govuk-input govuk-input--width-2"
+                  value="02"
+                />
+              </div>
+              <div class="govuk-date-input__item">
+                <label for="from-year" class="govuk-label">
+                  Year
+                </label>
+                <input
+                  type="text"
+                  id="from-year"
+                  name="from[year]"
+                  pattern="[0-9]*"
+                  inputmode="numeric"
+                  class="govuk-date-input__input govuk-input govuk-input--width-4"
+                  value="2023"
+                />
+              </div>
+            </div>
+          </fieldset>
+                </div>
+                </div>
+
+          <div id="to" class="govuk-form-group">
+          <fieldset
+            aria-describedby="to-hint"
+            class="govuk-fieldset"
+            role="group"
+          >
+            <legend class="govuk-fieldset__legend">
+              <p>To:</p>
+            </legend>
+            <div class="govuk-date-input">
+              <div class="govuk-date-input__item">
+                <label for="to-day" class="govuk-label">
+                  Day
+                </label>
+                <input
+                  type="text"
+                  id="to-day"
+                  name="to[day]"
+                  pattern="[0-9]*"
+                  inputmode="numeric"
+                  class="govuk-date-input__input govuk-input govuk-input--width-2"
+                  value="01"
+                />
+              </div>
+              <div class="govuk-date-input__item">
+                <label for="to-month" class="govuk-label">
+                  Month
+                </label>
+                <input
+                  type="text"
+                  id="to-month"
+                  name="to[month]"
+                  pattern="[0-9]*"
+                  inputmode="numeric"
+                  class="govuk-date-input__input govuk-input govuk-input--width-2"
+                  value="03"
+                />
+              </div>
+              <div class="govuk-date-input__item">
+                <label for="to-year" class="govuk-label">
+                  Year
+                </label>
+                <input
+                  type="text"
+                  id="to-year"
+                  name="to[year]"
+                  pattern="[0-9]*"
+                  inputmode="numeric"
+                  class="govuk-date-input__input govuk-input govuk-input--width-4"
+                  value="2023"
+                />
+              </div>
+            </div>
+          </fieldset>
+                </div>
+                <div class="govuk-button-group">
+                <input
+                type="submit"
+                class="govuk-button"
+                value="Run report"
+                />
+                <input
+                type="submit"
+                class="govuk-button--secondary"
+                value="Export"
+                />
+                </div>
+      <table>
+        <caption><h2>Results</h2></caption>
+
+        <tbody>
+          <tr>
+            <th scope="col">Priority</th>
+            <th scope="col">Added</th>
+            <th scope="col">Closed</th>
+            <th scope="col">Reviewed</th>
+            <th scope="col">Excalated</th>
+            <th scope="col">Letter issued</th>
+            <th scope="col">Phone call</th>
+            <th scope="col">Resolved</th>
+          </tr>
+          <tr>
+            <td><strong class="govuk-tag govuk-tag--red">
+              High
+            </strong></td>
+                        <td>3214</td>
+            <td>23</td>
+            <td>54</td>
+            <td>
+              32
+            </td>
+            <td>
+              14
+            </td>
+            <td>
+              645
+            </td>
+            <td>
+2876
+            </td>
+          </tr>
+          <tr>
+            <td><strong class="govuk-tag govuk-tag--red">
+              Medium
+            </strong></td>
+                        <td>3214</td>
+            <td>23</td>
+            <td>54</td>
+            <td>
+              32
+            </td>
+            <td>
+              14
+            </td>
+            <td>
+              645
+            </td>
+            <td>
+  2876
+            </td>
+          </tr>
+          <tr>
+            <td><strong class="govuk-tag govuk-tag--red">
+              Low
+            </strong></td>
+                        <td>3214</td>
+            <td>23</td>
+            <td>54</td>
+            <td>
+              32
+            </td>
+            <td>
+              14
+            </td>
+            <td>
+              645
+            </td>
+            <td>
+2876
+            </td>
+          </tr>
+
+
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</Fragment>
