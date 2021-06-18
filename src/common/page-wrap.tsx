@@ -20,7 +20,10 @@ export const PageWrap: FC<PageProps> = ({ routes, children }) => {
   return (
     <Page
       footerNavigation={navigation}
-      navigation={navigation}
+      //navigation={navigation}
+      navigation={[
+  { href: "/", text: "Home" },
+]}
       title="Case management"
     >
       {children}

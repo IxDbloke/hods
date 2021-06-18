@@ -8,10 +8,10 @@ const Page: FC<PageProps> = props => (
     <h1>Home</h1>
     <Button href="/cases" value="Cases page" />
     <p>This is a sandpit for the Home Office prototying kit.</p>
-    <p>View the <A href="/cases">cases page</A>.</p>
-    <p>View the <A href="/details">details page</A>.</p>
-    <p>View the <A href="/tabs">tabs page</A>.</p>
-    <p><A href="/foo">foo</A> is an example of an html page.</p>
+    <p>Simple <A href="/cases">cases page</A> with a data table.</p>
+    <p>A <A href="/details">details page</A> about a citizen called 'Dave Singh'.</p>
+    <p>A <A href="/tabs">tabs page</A> - each tab contains a different table.</p>
+    <p><A href="/foo">cases page</A> built in HTML rather than React - this kit can handle both.</p>
   </Fragment>
 );
 
